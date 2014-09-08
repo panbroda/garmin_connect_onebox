@@ -11,8 +11,12 @@ module Onebox
         @url.match(REGEX)[1]
       end
 
+      def url
+        "//connect.garmin.com/course/embed/#{id}"
+      end
+
       def to_html
-        "<iframe width='600' height='600' frameborder='0' src='http://connect.garmin.com/course/embed/#{id}'></iframe>"
+        "<iframe width='600' height='600' frameborder='0' src='#{'url'}'></iframe>"
       end
     end
   end
