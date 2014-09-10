@@ -1,7 +1,7 @@
 Garmin Connect Onebox
 =====================
 
-Garmin connect Onebox for embeding garmin courses
+Garmin connect Onebox for embedding garmin courses
 
 Install in Discourse 1.0
 

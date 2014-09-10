@@ -1,3 +1,8 @@
+# name: garmin_connect_onebox
+# about: Garmin connect Onebox for embedding garmin courses
+# version: 0.1
+# authors: Ewan McDougall
+
 Onebox = Onebox
 
 module Onebox
