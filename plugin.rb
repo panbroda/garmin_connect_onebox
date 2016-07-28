@@ -17,11 +17,11 @@ module Onebox
       end
 
       def is_course?
-        @url.include "course"
+        @url.include? "course"
       end
 
       def to_html
-        if is_course
+        if is_course?
           "<iframe width='600' height='600' frameborder='0' src='https://connect.garmin.com/course/embed/#{id}'></iframe>"
         else
           "<iframe width='475' height='497' frameborder='0' src='https://connect.garmin.com/modern/activity/embed/#{id}'></iframe>"
