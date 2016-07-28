@@ -3,7 +3,7 @@ Garmin Connect Onebox
 
 Garmin connect Onebox for embedding garmin courses
 
-Install in Discourse 1.0
+Install in Discourse 1.x
 
 ```sh
 cd /var/discourse
@@ -18,3 +18,8 @@ rake posts:refresh_oneboxes
 ```
 
 Example at http://elgin.cc/t/sun-19th-oct-14-spey-moor/77
+
+To run tests
+```sh
+ruby -Ilib:test plugin_test.rb
+```
