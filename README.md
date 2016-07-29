@@ -1,7 +1,8 @@
+[![Build Status](https://travis-ci.org/mrloop/garmin_connect_onebox.svg?branch=master)](https://travis-ci.org/mrloop/garmin_connect_onebox)
+
 # Garmin Connect Onebox
 
 [Garmin Connect](https://connect.garmin.com) [Onebox](https://github.com/discourse/onebox) for embedding garmin courses and activities in [Discourse](discourse.org)
-
 
 Course example at http://elgin.cc/t/sun-19th-oct-14-spey-moor/77
 
