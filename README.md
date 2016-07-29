@@ -1,26 +1,57 @@
 # Garmin Connect Onebox
 
-Garmin connect Onebox for embedding garmin courses and activities.
+[Garmin Connect](https://connect.garmin.com) [Onebox](https://github.com/discourse/onebox) for embedding garmin courses and activities in [Discourse](discourse.org)
 
-Example at http://elgin.cc/t/sun-19th-oct-14-spey-moor/77
 
-## Install in Discourse 1.x
+Course example at http://elgin.cc/t/sun-19th-oct-14-spey-moor/77
 
-```sh
-cd /var/discourse
-./launcher ssh app
-cd /var/www/discourse
-rake plugin:install repo='https://github.com/mrloop/garmin_connect_onebox.git'
-exit
-./launcher restart app
-./launcher ssh app
-cd /var/www/discourse
-rake posts:refresh_oneboxes
+### Supported URLs for embeds
+
+ - http(s)://connect.garmin.com/course/ID
+ - http(s)://connect.garmin.com/course/embed/ID
+ - http(s)://connect.garmin.com/modern/course/ID
+ - http(s)://connect.garmin.com/modern/activity/ID
+ - http(s)://connect.garmin.com/modern/embed/ID
+
+## Installation
+
+```yml
+
+    hooks:
+      after_code:
+        - exec:
+            cd: $home/plugins
+            cmd:
+              - mkdir -p plugins
+              - git clone https://github.com/discourse/docker_manager.git
+              - git clone https://github.com/mrloop/garmin_connect_onebox.git
+
 ```
 
+* Rebuild the container and restart the application
+
+```sh
+
+    cd /var/docker
+    ./launcher rebuild app
+    ./launcher restart app
+
+```
+
+### Update existing posts
+
+```sh
+
+    ./launcher ssh app
+    cd /var/www/discourse
+    rake posts:refresh_oneboxes
+
+```
 
 ## To run tests
 
 ```sh
-ruby -Ilib:test plugin_test.rb
+
+    ruby -Ilib:test plugin_test.rb
+
 ```
