@@ -17,7 +17,7 @@ module Onebox
       end
 
       def to_html
-          "<iframe width='600' height='600' frameborder='0' src='http://paga.ninja/lutim/gallery{id}'></iframe>"
+          "<iframe width='600' height='600' frameborder='0' src='http://paga.ninja/lutim/gallery#{id}'></iframe>"
        # else
       #    "<iframe width='475' height='497' frameborder='0' src='https://connect.garmin.com/modern/activity/embed/#{id}'></iframe>"
       end
