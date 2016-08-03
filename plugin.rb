@@ -9,7 +9,7 @@ module Onebox
   module Engine
     class GarminConnectOnebox
       include Engine
-      REGEX = /^https?:\/\/paga\.ninja(?::80)?\/lutim\/gallery(.*)/gm
+      REGEX = /^https?:\/\/paga\.ninja(?::80)?\/lutim\/gallery(.*)/m
       matches_regexp REGEX
 
       def id
